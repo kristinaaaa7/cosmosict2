@@ -1,0 +1,116 @@
+<!---function-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p> Rock paper scissors</p>
+    <button onclick="
+    usermove = 'rock';
+    computermove();
+    userallmove();
+    alert(`computer choose ${compmove} and you choose ${usermove} so ${result}`);
+    
+    ">
+        rock 
+    </button>
+
+    <button onclick="
+    usermove = 'paper';
+    computermove();
+    userallmove();
+    alert(`computer choose ${compmove} and you choose ${usermove} so ${result}`);
+    ">
+        paper
+
+    </button>
+    <button onclick="
+   
+    usermove = 'scissors';
+    computermove();
+    userallmove();
+    alert(`computer choose ${compmove} and you choose ${usermove} so ${result}`);
+    "
+    >
+        scissors
+    </button>
+    <script>
+       let  compmove = '';
+        function computermove()
+        {
+             const randomnumber = Math.random();
+             if (randomnumber >= 0 && randomnumber <= 1/3)
+             compmove ='rock';
+            else if (randomnumber >= 1/3 && randomnumber <= 2/3)
+                compmove = 'paper';
+            else if  (randomnumber >= 2/3 && randomnumber <= 1)
+                  compmove = 'scissors'
+             
+          }
+          let usermove= '';
+          let result = '';
+
+        function userallmove(){
+
+        
+        if (usermove === 'rock')
+        {
+            if (compmove=== 'paper' )
+                {
+                    result = ' you loose';
+                }
+            else if (compmove=== 'scissors')
+                {
+                    result = '  you  win';
+                }
+            else if (compmove=== 'rock' )
+            {
+                result = ' its tie';
+            }
+
+        }
+    else if (usermove === 'paper')
+        {
+            if (compmove=== 'scissors' )
+                {
+                    result = ' you loose';
+                }
+            else if (compmove===' paper')
+                {
+                    result = 'you  tie';
+                }
+            else if (compmove===' rock')
+                {
+                    result = 'you win';
+                }
+
+        }
+    else if ( usermove === 'scissors')
+        {
+            if (compmove=== 'paper' )
+                {
+                    result = ' you win';
+                }
+            else if (compmove=== 'rock')
+                {
+                    result = '  you  loose'
+                }
+            else if (compmove=== 'scissors')
+                {
+                    result = ' its tie'
+                }
+                
+
+        }
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
